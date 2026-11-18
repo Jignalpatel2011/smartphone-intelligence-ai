@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smartphone Intelligence AI</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 25px 16px;
+  background: #101522;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+header {
+  text-align: center;
+  margin-top: 65px;
+}
+h1 { font-size: 27px; }
+p { color: #aab4c5; }
+.search {
+  display: flex;
+  gap: 8px;
+  margin-top: 30px;
+}
+input {
+  min-width: 0;
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #39445a;
+  background: #202a3b;
+  color: white;
+}
+button {
+  padding: 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #2878ed;
+  color: white;
+}
+#result {
+  margin-top: 22px;
+  padding: 15px;
+  background: #202a3b;
+  border-radius: 10px;
+  color: #cbd5e1;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Smartphone Intelligence AI</h1>
+  <p>Your smartphone intelligence platform</p>
+</header>
+
+<div class="search">
+  <input id="phone" placeholder="Search any smartphone...">
+  <button onclick="searchPhone()">Search</button>
+</div>
+
+<div id="result">
+  Search a smartphone to get started.
+</div>
+
+<script>
+function searchPhone() {
+  const phone = document.getElementById("phone").value.trim();
+  const result = document.getElementById("result");
+
+  if (!phone) {
+    result.textContent = "Please enter a smartphone name.";
+    return;
+  }
+
+  result.textContent =
+    "Search interface ready for: " + phone +
+    ". Database connection is our next development step.";
+}
+</script>
+</body>
+</html>
